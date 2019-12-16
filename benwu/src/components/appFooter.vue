@@ -1,6 +1,6 @@
 // 底部栏
 <template>
-  <el-footer height="1.826667rem">
+  <el-footer height="1.268519rem">
     <a
       v-for="(item,index) in tabName"
       :key="item"

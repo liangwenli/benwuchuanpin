@@ -7,6 +7,7 @@
         v-show="currentIndex != 3"
       ></app-header>
       <app-main :currentComponent="currentComponent"></app-main>
+
       <app-footer
         :currentIndex="currentIndex"
         :tabName="tabName"
@@ -51,15 +52,13 @@ export default {
 <style>
 #app,
 .el-container {
-  flex-wrap: wrap;
   height: 100%;
-}
-.el-header {
-  width: 100%;
+  flex-direction: column !important;
 }
 .el-main {
   width: 100%;
-  flex: none;
-  height: 800px;
+  flex: 1;
+  padding: 0 !important;
+  overflow-y: auto;
 }
 </style>

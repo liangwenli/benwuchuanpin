@@ -6,7 +6,10 @@
         :tabName="tabName"
         v-show="currentIndex != 3"
       ></app-header>
-      <app-main :currentComponent="currentComponent"></app-main>
+
+      <el-main>
+        <router-view />
+      </el-main>
 
       <app-footer
         :currentIndex="currentIndex"
@@ -19,23 +22,23 @@
 
 <script>
 import appHeader from "./components/appHeader.vue";
-import appMain from "./components/appMain.vue";
 import appFooter from "./components/appFooter.vue";
 
 export default {
   name: "app",
-  data: function () {
+  data: function() {
     return {
-      tabName: ['首页', '分类', '购物车', '客服'],
-      indexName: ['index', 'sort', 'cart', 'center'],
+      tabName: ["首页", "分类", "购物车", "客服"],
+      indexName: ["home", "sort", "cart", "center"],
       currentIndex: 0,
-      currentComponent: 'index'
-    }
+      currentComponent: "home"
+    };
   },
   methods: {
     //改变当前页
-    changeIndex (index) {
+    changeIndex(index) {
       if (this.currentIndex != index) {
+        this.$router.push("/" + this.indexName[index]);
         this.currentIndex = index;
         this.currentComponent = this.indexName[index];
       }
@@ -43,7 +46,6 @@ export default {
   },
   components: {
     appHeader,
-    appMain,
     appFooter
   }
 };

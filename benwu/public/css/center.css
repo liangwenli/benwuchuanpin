@@ -4,10 +4,10 @@
 }
 .center-main {
   background-color: #f3f3f3;
+  padding-bottom: 0.277778rem;
 }
 .order-part {
   background-color: #fff;
-  margin-bottom: 0.277778rem;
 }
 .order-title {
   height: 1.324074rem;
@@ -16,12 +16,14 @@
   justify-content: space-between;
   align-items: center;
 }
-.order-title h2 {
+.order-title h2,
+.center-list h2 {
   font-size: 0.324074rem;
   margin-left: 0.277778rem;
   color: #584f60;
 }
-.order-title span {
+.order-title span,
+.center-list span {
   margin-right: 0.462963rem;
 }
 .order-list {
@@ -44,4 +46,16 @@
 .order-btn h2 {
   font-size: 0.25rem;
   color: #444444;
+}
+
+.center-list {
+  margin-top: 0.277778rem;
+}
+.center-list li {
+  height: 1.435185rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
 }

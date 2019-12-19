@@ -53,7 +53,44 @@
         </div>
       </div>
 
-      <div class="center-list"></div>
+      <ul class="center-list">
+        <li>
+          <h2>我的客服</h2>
+          <span class="el-icon-arrow-right"></span>
+        </li>
+
+        <li>
+          <h2>我的订单</h2>
+          <span class="el-icon-arrow-right"></span>
+        </li>
+
+        <li>
+          <h2>我的资料</h2>
+          <span class="el-icon-arrow-right"></span>
+        </li>
+
+        <li>
+          <h2>我的礼品</h2>
+          <span class="el-icon-arrow-right"></span>
+        </li>
+
+        <li>
+          <h2>我的赠品</h2>
+          <span class="el-icon-arrow-right"></span>
+        </li>
+
+        <li>
+          <h2>销售员中心</h2>
+          <span class="el-icon-arrow-right"></span>
+        </li>
+      </ul>
+
+      <ul class="center-list">
+        <li>
+          <h2>设置</h2>
+          <span class="el-icon-arrow-right"></span>
+        </li>
+      </ul>
     </main>
   </div>
 </template>

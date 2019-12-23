@@ -20,8 +20,7 @@ export default {
         path: "/center"
       }
     ],
-    currntIndex: 0,
-    headerShow: ["/home", "/sort", "/cart", "/login"],
+    headerHidden: ["/center"],
     footerShow: ["/home", "/sort", "/cart", "/center"]
   },
   mutations: {},

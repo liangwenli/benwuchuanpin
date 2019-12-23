@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <el-container>
-      <app-header v-show="this.$store.state.path.headerShow.includes(this.$route.path)"></app-header>
+      <app-header v-show="!this.$store.state.path.headerHidden.includes(this.$route.path)"></app-header>
 
       <el-main>
         <router-view />

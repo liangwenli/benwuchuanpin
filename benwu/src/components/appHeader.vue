@@ -1,9 +1,22 @@
 // 头部
 <template>
   <el-header height="1.175926rem">
-    <span class="el-icon-shopping-bag-2"></span>
+    <span
+      v-if="leftShow.includes(this.$route.path)"
+      class="el-icon-shopping-bag-2"
+    ></span>
+    <span v-else-if="this.$route.path=='/cart'"></span>
+    <span
+      v-else
+      class="el-icon-arrow-left"
+      @click="goBack"
+    ></span>
     <h2>{{this.$route.name}}</h2>
-    <span class="el-icon-chat-dot-round"></span>
+    <span
+      v-if="leftShow.includes(this.$route.path)"
+      class="el-icon-chat-dot-round"
+    ></span>
+    <span v-else></span>
   </el-header>
 </template>
 
@@ -13,11 +26,20 @@ export default {
   name: "appHeader",
   data: function () {
     return {
+      leftShow: ['/home', '/sort']
     }
   },
   computed: {
     activeIndex () {
       return this.$store.state.path.currntIndex;
+    }
+  },
+  methods: {
+    goBack () {
+      if (this.$route.meta.previousPage) {
+        this.$router.push({ path: this.$route.meta.previousPage });
+      } else { this.$router.back(); }
+
     }
   },
   components: {
